@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>js test</title>
+</head>
+
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.min.css">
+
+<body>
+
+<div class="row">
+
+	<div class="column medium-6">
+
+		<h2>Player 1</h2>
+		<p onClick='Gregg.Attack(Nick)'>Attack Player 2</p>
+		<p onClick='Gregg.Heal()'>Heal</p>
+		<pre class="GreggStats"></pre>
+
+	</div>
+	
+	<div class="column medium-6">
+
+		<h2>Player 2</h2>
+		<p onClick='Nick.Attack(Gregg)'>Attack Player 1</p>
+		<p onClick='Nick.Heal()'>Heal</p>
+		<pre class="NickStats"></pre>
+	</div>
+
+</div>	
+
+
+<script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js'></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.min.js"></script>
+<script type="text/javascript" src='model/character.js'></script>
+
+<script type="text/javascript">
+
+var Gregg = new Character({
+	'hitpoints' : 15,
+	'firstname' : 'Gregg',
+	'lastname' : 'Hurson',
+	'attack' : .75,
+	'items': {
+		'Potion' : 2
+	}
+	}
+);
+
+var Nick = new Character({
+	'hitpoints' : 20,
+	'firstname' : 'Nick',
+	'lastname' : 'Hurson',
+	'attack' : .5,
+	'items' : {
+		'Potion': 3
+	}
+	}
+);
+
+Gregg.UpdateStats();
+Nick.UpdateStats();
+
+
+</script>
+
+
+</body>
+</html>
