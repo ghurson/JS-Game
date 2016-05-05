@@ -1,10 +1,10 @@
 # Example JS Game
 
-## Trying to teach myself the basics of OOP JS
+#### Trying to teach myself the basics of OOP JS
 
 The RPG game will feature one or more characters doing text-based battle.
 
-### Roadmap
+## Roadmap
 
 + Character Setup
   + Forms With Names
